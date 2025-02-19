@@ -1,0 +1,14 @@
+[slack.Work]
+token = "xxxx-xxxx"
+
+[environments.Home]
+network = "home-wifi"
+emoji = "house_with_garden"
+text = "Working @ Home"
+until = "17:30"
+
+[environments.Work]
+network = "work-wifi"
+emoji = "office"
+text = "Working in the office"
+until = "17:00"
