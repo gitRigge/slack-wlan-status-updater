@@ -1,6 +1,12 @@
 [slack.Work]
 token = "xxxx-xxxx"
 
+[caldav]
+url = "https://caldav.example.com"
+username = "alice"
+password = "secret"
+calendar_name = "Work"
+
 [environments.Home]
 network = "home-wifi"
 emoji = "house_with_garden"
