@@ -9,12 +9,14 @@ calendar_name = "Work"
 
 [environments.Home]
 network = "home-wifi"
+ip = "192.168.188.2"
 emoji = "house_with_garden"
 text = "Working @ Home"
 until = "17:30"
 
 [environments.Work]
 network = "work-wifi"
+ip = "192.168.1.*"
 emoji = "office"
 text = "Working in the office"
 until = "17:00"

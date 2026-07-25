@@ -1,5 +1,5 @@
 # slack-wlan-status-updater
-Sets the Slack status on Windows OS depending on the active wifi network and your CalDAV calendar
+Sets the Slack status on Windows OS depending on the active (wifi) network and your CalDAV calendar
 
 ## Credits
 
@@ -41,12 +41,14 @@ calendar_name = "Work"
 
 [environments.Home]
 network = "home-wifi"  # SSID of the wifi network at home
+ip = "192.168.188.2"  # IP address of the host at home
 emoji = "house_with_garden"  # name of the emoji in Slack
 text = "Working @ Home"
 until = "17:30"
 
 [environments.Work]
 network = "work-wifi"
+ip = "192.168.1.*"
 emoji = "office"
 text = "Working in the office"
 until = "17:00"
