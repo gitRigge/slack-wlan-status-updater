@@ -12,18 +12,18 @@ from status_setter import (InterceptingSlackStatusSetterDecorator,
 class MainLoop:
     def __init__(
         self,
-        event_selector: CalendarSelector,
+        calendar_selector: CalendarSelector,
         status_selector: StatusSelector,
         status_setter: StatusSetter,
     ):
-        self._event_selector = event_selector
+        self._calendar_selector = calendar_selector
         self._status_selector = status_selector
         self._status_setter = status_setter
 
     def run(self) -> None:
         while True:
-            if self._event_selector is not None:
-                status = self._event_selector.select_status()
+            if self._calendar_selector is not None:
+                status = self._calendar_selector.select_status()
             if status.emoji is None:
                 status = self._status_selector.select_status()
             if status is None:
