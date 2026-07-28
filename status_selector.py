@@ -14,7 +14,7 @@ class StatusSelector:
     def select_status(self) -> Optional[Status]:
         active_connections = _get_active_connections()
         if active_connections is not None:
-            for environment in self._environments.items():
+            for environment in self._environments.values():
                 if environment["network"] in active_connections:
                     return Status(
                         environment["emoji"],
@@ -24,7 +24,7 @@ class StatusSelector:
         else:
             ip = _get_primary_ip()
             if ip is not None:
-                for environment in self._environments.items():
+                for environment in self._environments.values():
                     if fnmatch.fnmatch(ip, environment["ip"]):
                         return Status(
                             environment["emoji"],
